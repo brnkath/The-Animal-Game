@@ -1,0 +1,20 @@
+
+body {
+  background-color: #C98474;
+  height: vh;
+  width: vw;
+}
+
+.game-container {
+  background-image: url("Cheetah.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 550px;
+}
+
+h1 {
+  margin: 20px auto;
+}
+
