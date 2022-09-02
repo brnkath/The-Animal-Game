@@ -16,8 +16,16 @@ hr {
   height: 550px;
 }
 
-h1 {
-  margin: 10px auto;
+.btn {
+  font-size: 0.7rem
+}
+
+.btn-5 {
+  width: 17%;
+}
+
+.btn-4 {
+  width: 20%;
 }
 
 .ad-bottom {

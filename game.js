@@ -20,3 +20,8 @@ let bobcat = 35;
 let man = 100;
 let total = 0;
 let cemetary = total * 0;
+
+
+// Total button presses so far, and display in total section
+
+// Show "You Win" when total is equal to or greater than 100. Show "You Lose" when Cemetary is pressed.
