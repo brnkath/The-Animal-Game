@@ -130,16 +130,76 @@
             <p class="total">Total = 65</p>
           </div>
           <div class="bottom-buttons d-flex justify-content-evenly">
-            <button type="button" class="settings-btn btn btn-info btn-4 m-1">
+            <button
+              type="button"
+              class="settings-btn btn btn-info btn-3 m-1"
+              type="button"
+              class="btn btn-info"
+              data-bs-toggle="modal"
+              data-bs-target="#settingsModal"
+            >
               Settings
             </button>
-            <button type="button" class="hint-btn btn btn-success btn-4 m-1">
-              Hint
-            </button>
-            <button type="button" class="undo-btn btn btn-warning btn-4 m-1">
+            <div
+              class="modal fade"
+              id="settingsModal"
+              tabindex="-1"
+              aria-labelledby="settingsModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="settingsModalLabel">
+                      Settings
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="custom-control custom-switch">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="soundSwitch"
+                        checked
+                      />
+                      <label class="custom-control-label" for="soundSwitch"
+                        >Sound</label
+                      >
+                    </div>
+                    <div class="custom-control custom-switch">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="vibrateSwitch"
+                        checked
+                      />
+                      <label class="custom-control-label" for="vibrateSwitch"
+                        >Vibrate</label
+                      >
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="undo-btn btn btn-warning btn-3 m-1">
               Undo
             </button>
-            <button type="button" class="reset-btn btn btn-danger btn-4 m-1">
+            <button type="button" class="reset-btn btn btn-danger btn-3 m-1">
               Reset
             </button>
           </div>
