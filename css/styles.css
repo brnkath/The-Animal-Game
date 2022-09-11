@@ -10,7 +10,7 @@ hr {
 }
 
 .game-container {
-  background-image: url("Cheetah.jpg");
+  background-image: url("../img/Cheetah.jpg");
   background-size: cover;
   width: 400px;
   height: 550px;
