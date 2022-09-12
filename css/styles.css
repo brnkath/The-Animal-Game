@@ -9,10 +9,14 @@ hr {
   margin: 3px;
 }
 
+.modal {
+  max-height: 550px;
+}
+
 .game-container {
   background-image: url("../img/Cheetah.jpg");
   background-size: cover;
-  width: 400px;
+  width: 380px;
   height: 550px;
 }
 
@@ -34,6 +38,10 @@ hr {
 
 .total {
   font-size: 2rem;
+}
+
+settings-modal {
+  text-align: left;
 }
 
 .ad-bottom {

@@ -38,7 +38,7 @@
           aria-labelledby="howToModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="howToModalLabel">
@@ -51,7 +51,103 @@
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="modal-body">Here's how to play the animal game.</div>
+              <div class="modal-body text-start w-75 mx-auto">
+                <h5>General rules</h5>
+                <br />
+                <hr />
+                <br />
+                <h5>Below are the values for each button</h5>
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Button</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Dog</td>
+                      <td>1 point</td>
+                    </tr>
+                    <tr>
+                      <td>Cat</td>
+                      <td>1 point</td>
+                    </tr>
+                    <tr>
+                      <td>Bird</td>
+                      <td>1 point</td>
+                    </tr>
+                    <tr>
+                      <td>Squirrel</td>
+                      <td>1 point</td>
+                    </tr>
+                    <tr>
+                      <td>Rabbit</td>
+                      <td>1 point</td>
+                    </tr>
+                    <tr>
+                      <td>Cow</td>
+                      <td>1 point</td>
+                    </tr>
+                    <tr>
+                      <td>Horse</td>
+                      <td>2 points</td>
+                    </tr>
+                    <tr>
+                      <td>Deer</td>
+                      <td>4 points</td>
+                    </tr>
+                    <tr>
+                      <td>Fox</td>
+                      <td>10 points</td>
+                    </tr>
+                    <tr>
+                      <td>Coyote</td>
+                      <td>10 points</td>
+                    </tr>
+                    <tr>
+                      <td>Possum</td>
+                      <td>15 points</td>
+                    </tr>
+                    <tr>
+                      <td>Raccoon</td>
+                      <td>15 points</td>
+                    </tr>
+                    <tr>
+                      <td>Skunk</td>
+                      <td>20 points</td>
+                    </tr>
+                    <tr>
+                      <td>Bear</td>
+                      <td>35 points</td>
+                    </tr>
+                    <tr>
+                      <td>Moose</td>
+                      <td>45 points</td>
+                    </tr>
+                    <tr>
+                      <td>Wolf</td>
+                      <td>50 points</td>
+                    </tr>
+                    <tr>
+                      <td>Man with a white beard</td>
+                      <td>Automatic win</td>
+                    </tr>
+                    <tr>
+                      <td>Cemetary</td>
+                      <td>Back to zero</td>
+                    </tr>
+                    <tr>
+                      <td>Undo</td>
+                      <td>Remove last button press</td>
+                    </tr>
+                    <tr>
+                      <td>Reset</td>
+                      <td>Reset game</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <div class="modal-footer">
                 <button
                   type="button"
@@ -67,67 +163,139 @@
 
         <hr class="mt-3" />
 
-        <div class="game-buttons position-relative p-3">
+        <div class="game-buttons position-relative p-2">
           <div
             class="top-buttons d-flex flex-row flex-wrap justify-content-evenly"
           >
-            <button type="button" class="dog btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="dog"
+              class="dog game-btn btn btn-secondary btn-4 m-1"
+            >
               Dog
             </button>
-            <button type="button" class="cat btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="cat"
+              class="cat game-btn btn btn-secondary btn-4 m-1"
+            >
               Cat
             </button>
-            <button type="button" class="bird btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="bird"
+              class="bird game-btn btn btn-secondary btn-4 m-1"
+            >
               Bird
             </button>
-            <button type="button" class="squirrel btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="squirrel"
+              class="squirrel game-btn btn btn-secondary btn-4 m-1"
+            >
               Squirrel
             </button>
-            <button type="button" class="rabbit btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="rabbit"
+              class="rabbit game-btn btn btn-secondary btn-4 m-1"
+            >
               Rabbit
             </button>
-            <button type="button" class="cow btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="cow"
+              class="cow game-btn btn btn-secondary btn-4 m-1"
+            >
               Cow
             </button>
-            <button type="button" class="horse btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="horse"
+              class="horse game-btn btn btn-secondary btn-4 m-1"
+            >
               Horse
             </button>
-            <button type="button" class="deer btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="deer"
+              class="deer game-btn btn btn-secondary btn-4 m-1"
+            >
               Deer
             </button>
-            <button type="button" class="fox btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="fox"
+              class="fox game-btn btn btn-secondary btn-4 m-1"
+            >
               Fox
             </button>
-            <button type="button" class="coyote btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="coyote"
+              class="coyote game-btn btn btn-secondary btn-4 m-1"
+            >
               Coyote
             </button>
-            <button type="button" class="possum btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="possum"
+              class="possum game-btn btn btn-secondary btn-4 m-1"
+            >
               Possum
             </button>
-            <button type="button" class="raccoon btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="raccoon"
+              class="raccoon game-btn btn btn-secondary btn-4 m-1"
+            >
               Raccoon
             </button>
-            <button type="button" class="skunk btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="skunk"
+              class="skunk game-btn btn btn-secondary btn-4 m-1"
+            >
               Skunk
             </button>
-            <button type="button" class="bear btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="bear"
+              class="bear game-btn btn btn-secondary btn-4 m-1"
+            >
               Bear
             </button>
-            <button type="button" class="moose btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="moose"
+              class="moose game-btn btn btn-secondary btn-4 m-1"
+            >
               Moose
             </button>
-            <button type="button" class="wolf btn btn-secondary btn-4 m-1">
+            <button
+              type="button"
+              id="wolf"
+              class="wolf game-btn btn btn-secondary btn-4 m-1"
+            >
               Wolf
             </button>
-            <button type="button" class="man btn btn-secondary btn-2 m-1">
+            <button
+              type="button"
+              id="man"
+              class="man game-btn btn btn-secondary btn-2 m-1"
+            >
               Man with a white beard
             </button>
-            <button type="button" class="cemetary btn btn-secondary btn-2 m-1">
+            <button
+              type="button"
+              id="cemetary"
+              class="cemetary game-btn btn btn-secondary btn-2 m-1"
+            >
               Cemetary
             </button>
           </div>
           <div class="total mt-3 bg-light justify-content-center rounded">
-            <p class="total">Total = 65</p>
+            <p class="totalCount">Total = 65</p>
           </div>
           <div class="bottom-buttons d-flex justify-content-evenly">
             <button
@@ -151,7 +319,8 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="settingsModalLabel">
-                      Settings
+                      Settings for
+                      <span class="text-primary">The Animal Game</span>
                     </h5>
                     <button
                       type="button"
@@ -160,26 +329,26 @@
                       aria-label="Close"
                     ></button>
                   </div>
-                  <div class="modal-body">
-                    <div class="custom-control custom-switch">
+                  <div class="modal-body text-start w-75 mx-auto">
+                    <div class="form-check form-switch">
                       <input
+                        class="form-check-input"
                         type="checkbox"
-                        class="custom-control-input"
                         id="soundSwitch"
                         checked
                       />
-                      <label class="custom-control-label" for="soundSwitch"
+                      <label class="form-check-label" for="soundSwitch"
                         >Sound</label
                       >
                     </div>
-                    <div class="custom-control custom-switch">
+                    <div class="form-check form-switch">
                       <input
+                        class="form-check-input"
                         type="checkbox"
-                        class="custom-control-input"
                         id="vibrateSwitch"
                         checked
                       />
-                      <label class="custom-control-label" for="vibrateSwitch"
+                      <label class="form-check-label" for="vibrateSwitch"
                         >Vibrate</label
                       >
                     </div>
@@ -213,6 +382,16 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
       crossorigin="anonymous"
     ></script>
     <script src="js/game.js"></script>
