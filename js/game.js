@@ -16,54 +16,82 @@ let bear = 35;
 let moose = 45;
 let wolf = 50;
 let man = 100;
-let totalCount = "Total = " + 0;
-let cemetary = totalCount * 0;
-// For testing
-let buttonPress = "Total = " + 5;
 
-// Start with empty array
-  // gamePresses [
+// An empty array to store buttonPresses per game - WORKS
+  buttonPresses = [];
 
-  // ]
+// Add each game button clicked to buttonPresses array.Calculate the sum of array and change the totalCount innerHTML to that value
+  const thisButton = document.querySelectorAll(".game-btn");
+    if (thisButton.length !== 0) {
+      for (var i = 0; i < thisButton.length; i++) {
+        thisButton[i].addEventListener("click", function() {
+          let buttonClicked = this.id;
+          let addValue = buttonClicked;
+          buttonPresses.push(addValue);
+          document.querySelector(".totalCount").innerHTML = "Total = " + buttonPresses;
+        })
+      }
+    }
 
-// Total button presses so far, and display in total section
-  // buttonPresses [
-
-  // ]
-
-// Making a button change total text for testing
-  document.querySelector(".game-btn").onclick = function() {
-    let buttonClicked = this.id;
-    document.querySelector(".totalCount").innerHTML = "Total = " + buttonClicked;
-  }
-
-
-// Show "You Win" when total is equal to or greater than 100. Show "Oops, back to zero" when Cemetary is pressed and after short delay change total back to zero.
-  if (totalCount >= 100) {
+// Show "You Win" in total section when total is equal to or greater than 100 - does not work
+  // buttonPresses might need to be updated when the total count value gets figured out
+  if (buttonPresses >= 100) {
     document.querySelector(".totalCount").innerHTML = "You Win!";
+    setTimeout(function() {
+      $("#winModal").modal("show");
+      startOver();
+    }, 2000);
   }
 
+// Show "You Win!" in total section when the man button is pressed - WORKS
+  document.querySelector("#man").addEventListener("click",  function() {
+    document.querySelector(".totalCount").innerHTML = "You Win!";
+    setTimeout(function() {
+      $("#winModal").modal("show");
+      startOver();
+    }, 2000);
+  })
+
+// Make Cemetary button disply oops... and after delay bring total to zero again/reset game - WORKS
   document.querySelector(".cemetary").onclick = function() {
     document.querySelector(".totalCount").innerHTML = "Oops, back to zero";
     setTimeout(function() {
-      document.querySelector(".totalCount").innerHTML = "Total = 0";
-    }, 3000);
+      startOver();
+    }, 1000);
   }
 
-// Undo previous addition to gamePresses array
+// Undo previous addition to gamePresses array - works for removing last, but html just changes to the animal name like in the original addition to the array
+  document.querySelector(".undo").onclick = function() {
+    buttonPresses.pop();
+    document.querySelector(".totalCount").innerHTML = "Total = " + buttonPresses;
+    if (buttonPresses.length < 1) {
+      document.querySelector(".totalCount").innerHTML = "Total = 0";
+    }
+  }
 
+// Reset game by wiping out gamePresses array and setting total to zero - WORKS
+  function startOver() {
+    document.querySelector(".totalCount").innerHTML = "Total = 0";
+    buttonPresses = [];
+  }
+  document.querySelector(".reset").onclick = function() {
+    startOver();
+  }
 
-// Reset game by wiping out gamePresses array and setting total to zero
-
-
-// Add a sound and vibration on button press
-  $(".btn").click(function() {
+// Add a sound on button press - WORKS
+  $(".btn, .form-check-input").click(function() {
     let buttonSound = new Audio("snd/click-sound.mp3");
     buttonSound.play();
   })
 
-  document.querySelector(".btn").onclick = function() {
+// Add a vibration on button press on mobile devices - does not work
+  $(".btn").click(function() {
     window.navigator.vibrate(300);
-  }
+  })
 
-// Silence sound and vibration based on settings toggle positions
+// Silence sound based on settings toggle positions - does not work
+  // if buttonSound.[play() == true {
+  //   $(".soundSwitch").click;
+  // }
+
+// Stop vibration based on settings toggle switch - does not work
