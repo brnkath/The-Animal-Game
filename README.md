@@ -8,12 +8,12 @@ Roadkill cannot be counted for the purposes of this game. Also, there are two no
 
 Below are the values/function for each button
 
-  Button	                    Value
+  Button -	                    Value
 
-  Dog	                        1 point
-  Cat	                        1 point
-  Bird	                      1 point
-  Squirrel	                  1 point
+  Dog -	                        1 point
+  Cat -	                        1 point
+  Bird -	                      1 point
+  Squirrel -	                  1 point
   Rabbit	                    1 point
   Cow	                        1 point
   Horse	                      2 points
