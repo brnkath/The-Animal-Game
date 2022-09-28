@@ -8,26 +8,26 @@ Roadkill cannot be counted for the purposes of this game. Also, there are two no
 
 Below are the values/function for each button
 
-  Button -	                    Value
+  (Button -	                    Value)
 
-  Dog -	                        1 point
-  Cat -	                        1 point
-  Bird -	                      1 point
-  Squirrel -	                  1 point
-  Rabbit	                    1 point
-  Cow	                        1 point
-  Horse	                      2 points
-  Deer	                      4 points
-  Fox	                        10 points
-  Coyote	                    10 points
-  Possum	                    15 points
-  Raccoon	                    15 points
-  Skunk	                      20 points
-  Bear	                      35 points
-  Moose	                      45 points
-  Wolf	                      50 points
-  Man with a white beard	    Automatic win
-  Cemetary	                  Back to zero
-  Undo	                      Remove last button press
-  Reset	                      Reset game
+  Dog -	                        1 point,
+  Cat -	                        1 point,
+  Bird -	                      1 point,
+  Squirrel -	                  1 point,
+  Rabbit -	                    1 point,
+  Cow -	                        1 point,
+  Horse -	                      2 points,
+  Deer -	                      4 points,
+  Fox -	                        10 points,
+  Coyote -	                    10 points,
+  Possum -	                    15 points,
+  Raccoon -	                    15 points,
+  Skunk -	                      20 points,
+  Bear -	                      35 points,
+  Moose -	                      45 points,
+  Wolf -	                      50 points,
+  Man with a white beard -	    Automatic win,
+  Cemetary -	                  Back to zero,
+  Undo -	                      Remove last button press,
+  Reset -	                      Reset game
   
