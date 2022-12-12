@@ -25,7 +25,7 @@ let man = 100;
     if (thisButton.length !== 0) {
       for (var i = 0; i < thisButton.length; i++) {
         thisButton[i].addEventListener("click", function() {
-          let buttonClicked = this.id;
+          let buttonClicked = parseInt(this.id); // Number(moose); returns 45
           let addValue = buttonClicked;
           buttonPresses.push(addValue);
           document.querySelector(".totalCount").innerHTML = "Total = " + buttonPresses;
