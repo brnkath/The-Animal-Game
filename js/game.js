@@ -85,9 +85,14 @@ let man = 100;
   })
 
 // Add a vibration on button press on mobile devices - does not work
-  $(".btn").click(function() {
-    window.navigator.vibrate(300);
-  })
+  // $(".btn").click(function() {
+  //   window.navigator.vibrate(300);
+  // })
+  const buttonClick = document.querySelector(".btn");
+
+    buttonClick.addEventListener("click", function() {
+      navigator.vibrate(100);
+    });
 
 // Silence sound based on settings toggle positions - does not work
   // if buttonSound.[play() == true {
