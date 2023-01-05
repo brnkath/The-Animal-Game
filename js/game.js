@@ -88,7 +88,7 @@ let man = 100;
   // $(".btn").click(function() {
   //   window.navigator.vibrate(300);
   // })
-  const buttonClick = document.querySelector(".btn");
+  const buttonClick = document.querySelectorAll(".game-btn");
 
     buttonClick.addEventListener("click", function() {
       navigator.vibrate(100);
