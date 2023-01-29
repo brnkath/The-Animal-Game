@@ -83,9 +83,9 @@
                   anytime you are furtunate enough to see a man with a white
                   beard. Fortunate, because seeing a man with a white beard is
                   worth 100 points, and therefore, an automatic win. The button
-                  labeled "Cemetary" should be selected anytime you pass a
-                  cemetary on your side of the vehicle. Passing a cemetary
-                  results in your score going back to zero.
+                  labeled "Passed a cemetary" should be selected anytime you
+                  pass a cemetary on your side of the vehicle. Passing a
+                  cemetary results in your score going back to zero.
                 </p>
                 <br />
                 <hr />
@@ -168,7 +168,7 @@
                       <td>Automatic win</td>
                     </tr>
                     <tr>
-                      <td>Cemetary</td>
+                      <td>Passed a cemetary</td>
                       <td>Back to zero</td>
                     </tr>
                     <tr>
@@ -327,7 +327,7 @@
               id="cemetary"
               class="cemetary game-btn btn btn-secondary btn-2 m-1"
             >
-              Cemetary
+              Passed a cemetary
             </button>
           </div>
           <div class="total mt-3 bg-light justify-content-center rounded">
@@ -363,7 +363,7 @@
                     class="btn btn-primary"
                     data-bs-dismiss="modal"
                   >
-                    OK
+                    Yes
                   </button>
                 </div>
               </div>
@@ -378,9 +378,11 @@
               data-bs-toggle="modal"
               data-bs-target="#settingsModal"
             >
-              Settings
+              Sound <span class="soundOn">On</span>/<span class="soundOff"
+                >Off</span
+              >
             </button>
-            <div
+            <!-- <div
               class="modal fade"
               id="settingsModal"
               tabindex="-1"
@@ -436,7 +438,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <button type="button" class="undo btn btn-warning btn-3 m-1">
               Undo
             </button>
