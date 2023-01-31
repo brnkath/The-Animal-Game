@@ -16,8 +16,10 @@ hr {
 .game-container {
   background-image: url("../img/Cheetah.jpg");
   background-size: cover;
-  width: 380px;
-  height: 550px;
+  width: 100vh;
+  height: 100vh;
+  max-width: 380px;
+  max-height: 550px;
 }
 
 .btn {
