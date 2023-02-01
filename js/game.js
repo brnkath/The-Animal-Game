@@ -81,14 +81,10 @@
 // Make orientation modal open when in landscape on mobile
   switch (screen.orientation.type) {
     case "landscape-primary":
-      alert("Landscape-primary!!");
+      $("#orientationModal").modal("show");
       break;
     case "landscape-secondary":
-      alert("Landscap-primary!!");
-      break;
-    case "portrait-secondary":
-    case "portrait-primary":
-      alert("Portrait!!");
+      $("#orientationModal").modal("show");
       break;
       default:
         console.log("The orientation API isn't supported in this browser :(");
