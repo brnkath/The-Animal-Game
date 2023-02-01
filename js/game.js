@@ -12,7 +12,7 @@
           const totalValue = buttonPresses.map(num => parseInt(num, 10)).reduce((acc, currentValue) => acc + currentValue, 0);
           document.querySelector(".totalCount").innerHTML = "Total = " + totalValue;
           if (totalValue >= 100) {
-            document.querySelector(".totalCount").innerHTML = "You Win!";
+            document.querySelector(".totalCount").innerHTML = "You Win!!";
             setTimeout(function() {
               $("#winModal").modal("show");
               startOver();
@@ -24,7 +24,7 @@
 
 // Show "You Win!" in total section when the man button is pressed - WORKS
   document.querySelector("#man").addEventListener("click",  function() {
-    document.querySelector(".totalCount").innerHTML = "You Win!";
+    document.querySelector(".totalCount").innerHTML = "You Win!!";
     setTimeout(function() {
       $("#winModal").modal("show");
       startOver();
@@ -76,5 +76,20 @@
     } else {
       muteButton.textContent = 'Mute';
     }
-
   });
+
+// Make orientation modal open when in landscape on mobile
+  switch (screen.orientation.type) {
+    case "landscape-primary":
+      console.log("That looks good.");
+      break;
+    case "landscape-secondary":
+      console.log("Mmmh… the screen is upside down!");
+      break;
+    case "portrait-secondary":
+    case "portrait-primary":
+      console.log("Mmmh… you should rotate your device to landscape");
+      break;
+      default:
+        console.log("The orientation API isn't supported in this browser :(");
+}
