@@ -1,6 +1,6 @@
 
 body {
-  background-color: #C98474;
+  background-image: linear-gradient(to bottom right, #808080, #D0D0D0);
   height: vh;
   width: vw;
 }
@@ -40,10 +40,6 @@ hr {
 
 .total {
   font-size: 2rem;
-}
-
-settings-modal {
-  text-align: left;
 }
 
 .ad-bottom {

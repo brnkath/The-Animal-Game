@@ -1,8 +1,8 @@
 
-// An empty array to store buttonPresses per game - WORKS
+// An empty array to store buttonPresses per game
   let buttonPresses = [];
 
-// Add each game button clicked to buttonPresses array. Calculate the sum of array and change the totalCount innerHTML to that value. Also show "You Win" in total section when total is equal to or greater than 100 - WORKS
+// Add each game button clicked to buttonPresses array. Calculate the sum of array and change the totalCount innerHTML to that value. Also show "You Win" in total section when total is equal to or greater than 100
   const thisButton = document.querySelectorAll(".game-btn");
     if (thisButton.length !== 0) {
       for (let i = 0; i < thisButton.length; i++) {
@@ -22,7 +22,7 @@
       }
     }
 
-// Show "You Win!" in total section when the man button is pressed - WORKS
+// Show "You Win!" in total section when the man button is pressed
   document.querySelector("#man").addEventListener("click",  function() {
     document.querySelector(".totalCount").innerHTML = "You Win!!";
     setTimeout(function() {
@@ -31,7 +31,7 @@
     }, 2000);
   })
 
-// Make Cemetary button disply oops... and after delay bring total to zero again/reset game - WORKS
+// Make Cemetary button disply oops... and after delay bring total to zero again/reset game
   document.querySelector(".cemetary").onclick = function() {
     document.querySelector(".totalCount").innerHTML = "Oops, back to zero";
     setTimeout(function() {
@@ -39,7 +39,7 @@
     }, 2000);
   }
 
-// Undo previous addition to gamePresses array - WORKS
+// Undo previous addition to gamePresses array
   document.querySelector(".undo").onclick = function() {
     buttonPresses.pop();
     let newValue = buttonPresses.map(num => parseInt(num, 10)).reduce((acc, currentValue) => acc + currentValue, 0);
@@ -49,7 +49,7 @@
     }
   }
 
-// Reset game by wiping out gamePresses array and setting total to zero - WORKS
+// Reset game by wiping out gamePresses array and setting total to zero
   function startOver() {
     document.querySelector(".totalCount").innerHTML = "Total = 0";
     buttonPresses = [];
@@ -58,38 +58,39 @@
     startOver();
   }
 
-// Toggle sound on button press -
+// Create sound on button press
   $(".btn").click(function() {
     let buttonSound = new Audio("snd/click-sound.mp3");
     buttonSound.play();
-  }) //Add an if else to change the css of On or OFF associated with soundOff and soundOn classes
+  })
 
-  const muteButton = document.getElementById('muteButton');
+  //Toggle sound on/off with button press and change inner HTML based on state
+  let toggleSoundButton = document.getElementById("toggleSound");
+  let volume = 1;
 
-  muteButton.addEventListener('click', (event) => {
-    const audioElement = document.querySelector('audio');
-
-    audioElement.toggleAttribute('muted');
-
-    if (audioElement.muted) {
-      muteButton.textContent = 'Unmute';
+  toggleSoundButton.addEventListener("click", function() {
+    if (volume > 0) {
+      toggleSound.innerHTML = "Sound On";
+      volume = 0;
+      // turn sound off
     } else {
-      muteButton.textContent = 'Mute';
+      toggleSound.innerHTML = "Sound Off";
+      volume = 1;
+      // turn sound on
     }
+    audio.volume = volume;
   });
 
-// Make orientation modal open when in landscape on mobile
-  switch (screen.orientation.type) {
-    case "landscape-primary":
-      setTimeout(function() {
-        $("#orientationModal").modal("show");
-      }, 2000);
-      break;
-    case "landscape-secondary":
-      setTimeout(function() {
-        $("#orientationModal").modal("show");
-      }, 2000);
-      break;
-      default:
-        console.log("The orientation API isn't supported in this browser :(");
-}
+  // function toggleMute() {
+  //   if (volume > 0) {
+  //     volume = 0;
+  //   } else {
+  //     volume = 1;
+  //   }
+  //   audio.volume = volume;
+  // }
+
+  function playSound() {
+    buttonSound.play();
+  }
+
