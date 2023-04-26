@@ -9,14 +9,10 @@ hr {
   margin: 3px;
 }
 
-.modal {
-  max-height: 550px;
-}
-
 .game-container {
   background-image: url("../img/Cheetah.jpg");
   background-size: cover;
-  width: 98vh;
+  width: 98vw;
   height: 100vh;
   max-width: 380px;
   max-height: 550px;

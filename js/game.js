@@ -58,39 +58,28 @@
     startOver();
   }
 
-// Create sound on button press
-  $(".btn").click(function() {
-    let buttonSound = new Audio("snd/click-sound.mp3");
-    buttonSound.play();
-  })
-
-  //Toggle sound on/off with button press and change inner HTML based on state
-  let toggleSoundButton = document.getElementById("toggleSound");
+  // Toggle sound on/off with button press and change inner HTML based on state
+  let buttonSound = new Audio("snd/click-sound.mp3");
   let volume = 1;
+
+  function playButtonSound() {
+    if (volume > 0) {
+      buttonSound.currentTime = 0;
+      buttonSound.play();
+    }
+  }
+
+  $(".btn").click(playButtonSound);
+
+  let toggleSoundButton = document.getElementById("toggleSound");
 
   toggleSoundButton.addEventListener("click", function() {
     if (volume > 0) {
-      toggleSound.innerHTML = "Sound On";
+      toggleSoundButton.innerHTML = "Sound On";
       volume = 0;
-      // turn sound off
     } else {
-      toggleSound.innerHTML = "Sound Off";
+      toggleSoundButton.innerHTML = "Sound Off";
       volume = 1;
-      // turn sound on
     }
-    audio.volume = volume;
   });
-
-  // function toggleMute() {
-  //   if (volume > 0) {
-  //     volume = 0;
-  //   } else {
-  //     volume = 1;
-  //   }
-  //   audio.volume = volume;
-  // }
-
-  function playSound() {
-    buttonSound.play();
-  }
 
