@@ -1,6 +1,5 @@
-
 body {
-  background-image: linear-gradient(to bottom right, #808080, #D0D0D0);
+  background-image: linear-gradient(to bottom right, #808080, #d0d0d0);
   height: vh;
   width: vw;
 }
@@ -16,6 +15,7 @@ hr {
   height: 100vh;
   max-width: 380px;
   max-height: 550px;
+  overflow: auto;
 }
 
 .btn {
@@ -39,7 +39,7 @@ hr {
 }
 
 .ad-bottom {
-  background-color: #F5EDDC;
+  background-color: #f5eddc;
   width: 300px;
   height: 50px;
 }
